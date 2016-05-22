@@ -1,21 +1,24 @@
 {{! This is the post loop - each post will be output using this markup }}
-{{#foreach posts}}
-<article class="{{post_class}}">
-    <header class="post-header">
-        <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
-    </section>
-    <footer class="post-meta">
-        <!-- author information - uncomment if using
-        {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />{{/if}}
-        {{author}} -->
-        {{tags prefix=" on "}}
-        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
-    </footer>
-</article>
-{{/foreach}}
+{{#get "tags" limit="all" order="updated_at desc" as |tags|}}
+  {{#foreach tags}}
+    <h2>{{name}}</h2>
+    <div class="posts">
+      {{#get "posts" limit="all" order="published_at desc" filter="tags:{{slug}}"}}
+        {{#foreach posts}}
+          <article class="post-preview {{post_class}}">
+              <a href="{{url}}">
+                <div class="post-header" style="background-image: url({{image}});">
+                  <h2 class="post-preview-title">{{title}}</h2>
+                </div>
+              </a>
+          </article>
+        {{/foreach}}
+      {{/get}}
+    </div>
+  {{/foreach}}
+{{/get}}
 
-{{! Previous/next page links - displayed on every page }}
-{{pagination}}
+<div class="pagination" style="display: none;">
+  {{! Previous/next page links - displayed on every page }}
+  {{pagination}}
+</div>

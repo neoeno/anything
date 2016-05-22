@@ -1,0 +1,101 @@
+.posts {
+  margin-bottom: 36px;
+}
+
+.post-preview {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 400px;
+  margin-right: 24px;
+  margin-bottom: 24px;
+
+  &:hover {
+    box-shadow: 10px 10px #333;
+  }
+
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.post-header {
+  height: 288px;
+  background-size: cover;
+  background-position: center center;
+}
+
+.post-tags {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.post-head {
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+}
+
+.image-post-title__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 4em;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 8em);
+}
+
+.image-post-title {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-shadow: 1px 1px black;
+  font-weight: 300;
+  font-size: 96px;
+  line-height: 96px;
+  padding: 12px 48px;
+  margin: 0;
+  max-width: 80vw;
+  text-align: center;
+
+  @media only screen and (max-width: 800px) {
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
+
+.post-body {
+  font-family: "Bariol Serif", serif;
+  margin-top: 48px;
+  width: 30em;
+  font-size: 24px;
+  line-height: 36px;
+  padding-bottom: 96px;
+
+  p {
+    margin: 36px 0;
+  }
+
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.post-preview-title {
+  display: inline-block;
+  font-size: 24px;
+  line-height: 24px;
+  color: #333;
+  background: white;
+  max-width: 240px;
+  margin: 0;
+  padding: 12px;
+  margin-left: 24px;
+  margin-top: 24px;
+  font-weight: 500;
+  text-transform: lowercase;
+}

@@ -9,11 +9,17 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "grunt-contrib-jshint": "~0.6.0",
-    "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-uglify": "~0.2.0",
-    "grunt-contrib-watch": "~0.4.0",
+    "grunt": "~0.4.1",
+    "grunt-browserify": "^5.0.0",
     "grunt-contrib-clean": "~0.4.0",
-    "grunt": "~0.4.1"
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-watch": "~0.4.0"
+  },
+  "dependencies": {
+    "grunt-contrib-sass": "^1.0.0",
+    "jquery": "^2.2.3",
+    "typeset": "^0.2.2"
   }
 }

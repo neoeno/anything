@@ -1,0 +1,11 @@
+.page-title {
+  margin: 0;
+  font-family: Bariol;
+  font-weight: 300;
+  font-size: 96px;
+  line-height: 1.25;
+
+  @media only screen and (max-width: 800px) {
+    font-size: 48px;
+  }
+}

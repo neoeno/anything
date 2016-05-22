@@ -1,2 +1,11 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 // import each module
-@import "modules/color";
+@import "../modules/color";
+@import "../modules/fonts";
+@import "../modules/links";
+@import "../modules/header";
+@import "../modules/post";
+@import "../modules/nav";

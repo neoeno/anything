@@ -14,8 +14,7 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         options: {
-          style: 'compressed',
-          banner: '<%= banner %>'
+          style: 'compressed'
         },
         files: {
           'assets/css/main.css': 'assets/sass/main.scss'
@@ -47,9 +46,15 @@ module.exports = function(grunt) {
         tasks: ['sass'],
       },
       js: {
-        files: 'assets/js/*.js',
-        tasks: ['concat', 'uglify'],
+        files: 'assets/js/main.js',
+        tasks: ['browserify'],
       },
+    },
+    browserify: {
+      dist: {
+        src: ['assets/js/main.js'],
+        dest: 'assets/js/main.min.js'
+      }
     }
   });
 
@@ -58,8 +63,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-browserify');
 
   // Default task.
-  grunt.registerTask('default', ['sass', 'concat', 'uglify']);
+  grunt.registerTask('default', ['sass', 'browserify', 'uglify']);
 
 };

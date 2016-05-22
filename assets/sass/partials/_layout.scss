@@ -1,0 +1,19 @@
+body {
+  background-color: white;
+}
+
+.main-header {
+  padding: 24px 48px 48px 48px;
+}
+
+.content, .basic-header {
+  padding: 0 48px;
+
+  @media only screen and (max-width: 800px) {
+    padding: 0 12px;
+  }
+}
+
+.basic-header {
+  padding-top: 48px;
+}

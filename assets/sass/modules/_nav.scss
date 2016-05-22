@@ -1,0 +1,19 @@
+.back-button--on-image {
+  color: white;
+  text-shadow: 1px 1px #333;
+}
+
+.site-header {
+  border-bottom: 1px solid #333;
+  padding: 24px 48px;
+  font-size: 24px;
+}
+
+.site-header__home-link {
+  color: #333;
+  font-weight: 700;
+
+  &:hover {
+    color: red;
+  }
+}
