@@ -1,4 +1,16 @@
 a {
-  color: red;
+  color: #a20000;
   text-decoration: none;
+
+  &:hover {
+    border-bottom: 1px solid currentColor;
+  }
+}
+
+a.silent {
+  color: inherit;
+
+  &:hover {
+    border-bottom: none;
+  }
 }

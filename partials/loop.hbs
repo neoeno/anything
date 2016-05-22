@@ -1,22 +1,19 @@
 {{! This is the post loop - each post will be output using this markup }}
-{{#get "tags" limit="all" order="updated_at desc" as |tags|}}
-  {{#foreach tags}}
-    <h2>{{name}}</h2>
-    <div class="posts">
-      {{#get "posts" limit="all" order="published_at desc" filter="tags:{{slug}}"}}
-        {{#foreach posts}}
-          <article class="post-preview {{post_class}}">
-              <a href="{{url}}">
-                <div class="post-header" style="background-image: url({{image}});">
-                  <h2 class="post-preview-title">{{title}}</h2>
-                </div>
-              </a>
-          </article>
-        {{/foreach}}
-      {{/get}}
-    </div>
-  {{/foreach}}
-{{/get}}
+<ul class="post-list">
+  {{#get "tags" limit="all" order="updated_at desc" as |tags|}}
+    {{#foreach tags}}
+      <li class="post-category">{{name}}
+        {{#get "posts" limit="all" order="published_at desc" filter="tags:{{slug}}"}}
+          <ul class="post-category__items">
+            {{#foreach posts}}
+              <li class="post-category__item"><a href="{{url}}">{{title}}</a></li>
+            {{/foreach}}
+          </ul>
+        {{/get}}
+      </li>
+    {{/foreach}}
+  {{/get}}
+</ul>
 
 <div class="pagination" style="display: none;">
   {{! Previous/next page links - displayed on every page }}
