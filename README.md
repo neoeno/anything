@@ -1,6 +1,10 @@
-Pliny the Younger wrote what many consider the first ghost story. Similarly, Pliny aims to be the origin of many themes for the Ghost blogging platform. Using Sass and Grunt, Pliny brings modern front-end tools to an ancient story.
+This was based off of [Pliny](http://github.com/ascott1/Pliny) which is Super
+Great and you should Check It Out Mate.
 
-![Pliny the Younger](https://raw.github.com/ascott1/Pliny/master/assets/img/pliny.jpg)
+Then I changed a load of stuff really badly. I don't care. Stop stalking my
+github RECRUITERS.
+
+WHAT FOLLOWS IS MOST OF THE ORIGINAL README SAVED FOR GOOD MEMORIES
 
 ## Dependencies
 
